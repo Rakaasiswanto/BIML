@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+        <title>Used Phone Analysis</title>
+     
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../static/img/health.ico">
+    <!-- Bootstrap CSS -->
+      <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+      
+  </head>
+  <body class="element">
+    <header>
+     
+      <!--Mask-->
+      <div id="intro" class="container-fluid view ">
+           <br>
+          <br>
+        <div class="container">
+            <h2 class='container-heading'><span class="heading_font"><p style="font-family:Lucida Sans Typewriter">Usend Phone Analysis</p></span></h2>
+            <div class='description'>
+    			<p style="font-family:Goudy Old Style"></p>
+    		</div>
+    	</div>
+        <div class="row mb-5">
+          <div class="col-lg-6 col-md-6 col-12 my-auto">
+          	<img src="Phone.PNG" class="float-left" width="600" height="700">
+           <!-- <img src="../static/img/liver.jpg" class="float-left"> -->
+            
+          </div>
+          <div class="col-lg-6 col-md-6 col-12">
+            <form action="{{ url_for('predict') }}" method="POST">
+              <div class="form-group">
+                <!-- TODO : Year to accept only year date picker -->
+                <br><br><br>
+                <label for="Year">Year</label>
+                <input class="form-control" type="number" id="Year" name="Year" required="required" placeholder="Enter the year">
+                </div>
+              <div class="form-group">
+                <label for="Present_Price">New Price</label>
+                <input class="form-control" type="number" step="any" id="Present_Price" name="Present_Price" required="required" placeholder="Enter New Price">
+              </div>
+              <div class="form-group">
+                <label for="Kms_Driven">Battre Health</label>
+                <input class="form-control" type="number" id="Kms_Driven" name="Kms_Driven" required="required" placeholder="Battre Health">
+              </div>
+              <div class="form-group">
+                <label for="Owner">Previously owner</label>
+                <input class="form-control" type="number" id="Owner" name="Owner" required="required" placeholder="How many owner previously head">
+              </div>
+                
+                <div class="form-group">
+                <label for="Fuel_Type_Petrol">Phone Type</label>
+                <select class="form-control" type="number" id="Fuel_Type_Petrol" name="Fuel_Type_Petrol" required="required" placeholder="What Is the phone type">
+                <option value="0">iphone</option>
+                <option value="1">samsung</option>
+            	</select>
+              </div>
+                
+                <div class="form-group">
+                <label for="Seller_Type_Individual">For company use or individual use</label>
+                <select class="form-control" type="number" id="Seller_Type_Individual" name="Seller_Type_Individual" required="required" placeholder="company or individual use">
+                <option value="0">Individual</option>
+                <option value="1">company</option>
+            	</select>
+              </div>
+                
+                <div class="form-group">
+                <label for="Transmission_Mannual">ROM</label>
+                <select class="form-control" type="number" id="Transmission_Mannual" name="Transmission_Mannual" required="required" placeholder="ROM">
+                <option value="0">4 gb</option>
+                <option value="1">8 gb</option>
+            	</select>
+              </div>
+                
+              <button type="submit" class="btn btn-primary">Predict Price</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!--/.Mask-->
+    </header>
+       <br>
+      <br>
+      <br>
+      <br>
+      <div class="container-fluid">
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/OvinduWijethunge"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/ovinduwijethunge/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.instagram.com/ovindu_vesuvius/"><i class="fab fa-instagram fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'></p>
+       </div>
+      </div>
+      
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
